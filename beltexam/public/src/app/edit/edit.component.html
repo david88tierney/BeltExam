@@ -1,0 +1,16 @@
+
+
+<fieldset>
+  <legend>Edit a Restaraunt</legend>
+<form (submit)="update(restaraunt._id)">
+  <p>Restaraunt Name:</p>
+    <input type="text" name="restaraunt.name" [(ngModel)]= "restaraunt.name" placeholder="Edit name">
+    <p *ngIf="errors.name"> {{errors.name.message}}</p>
+
+  <p>Cuisine: </p>
+    <input type="text" name="restaraunt.cuisine" [(ngModel)]= "restaraunt.cuisine" placeholder="Edit cuisine style here" >
+    <p *ngIf="errors.cuisine"> {{errors.cuisine.message}}</p>
+  <br>
+    <input type="submit" value="Edit restaraunt" />
+  </form>
+</fieldset>

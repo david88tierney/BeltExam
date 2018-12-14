@@ -1,0 +1,18 @@
+<table border="1">
+  <tr>
+    <th>Restaraunt</th>
+    <th>Cuisine</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let restaraunt of restaraunts">
+    <td> {{ restaraunt.name }} </td>
+    <td> {{ restaraunt.cuisine }} </td>
+    <td>
+        <a [routerLink]="['/restaraunt', restaraunt._id]"><button>Read Reviews</button></a>
+        <a [routerLink]="['/edit', restaraunt._id]"><button>update</button></a>
+        <button (click) = "delete(restaraunt._id)">Delete</button>
+    </td>
+
+  </tr>
+
+</table>

@@ -1,0 +1,24 @@
+
+<fieldset>
+    <form (submit)="addReview(restaraunt._id)" onsubmit="return false;">
+       <p>Name: <input type="text" name="newreview.name" [(ngModel)]="newreview.name" /></p>
+       <p>Rating:
+         <select name="newreview.rating" [(ngModel)]="newreview.rating">
+           <option value="5">★★★★★</option>
+           <option value="4">★★★★☆</option>
+           <option value="3">★★★☆☆</option>
+           <option value="2">★★☆☆☆</option>
+           <option value="1">★☆☆☆☆</option>
+         </select>
+       </p>
+       <p>Comment here:
+         <br>
+         <textarea name="newreview.comment" [(ngModel)]="newreview.comment" cols=50 rows=5></textarea>
+       </p>
+       <input type="submit" value="Leave a review!" />
+    </form>
+  </fieldset>
+
+
+
+

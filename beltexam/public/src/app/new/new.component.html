@@ -1,0 +1,13 @@
+<fieldset>
+  <legend>Create a Restaraunt</legend>
+<form (submit)="create()">
+  <p>Restaraunt Name:</p>
+  <input type="text" name="restaraunt.name" [(ngModel)]= "restaraunt.name" placeholder="restaraunt name here">
+  <p *ngIf="errors.name"> {{errors.name.message}}</p>
+  <p>Cuisine Style:</p>
+  <input type="text" name="restaraunt.cuisine" [(ngModel)]= "restaraunt.cuisine" placeholder="Cuisine style here" >
+  <p *ngIf="errors.cuisine"> {{errors.cuisine.message}}</p>
+  <br>
+  <input type="submit" value="Add a restaraunt" />
+</form>
+</fieldset>
